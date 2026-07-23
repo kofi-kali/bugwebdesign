@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Web Design — Premium Websites for Ghanaian Businesses</title>
+    <meta name="description" content="Bug Web Design builds beautiful, affordable websites for Ghanaian businesses. Fashion, restaurants, salons, gyms & more. GH₵ 200-1,200. DM @bugjnr on Telegram.">
+    <meta name="keywords" content="web developer Ghana, website design Ghana, affordable websites Ghana, web design Accra, Bug Web Design, Ghana web developer, website for business Ghana">
+    <meta name="author" content="Bug Web Design">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Bug Web Design — Premium Websites for Ghanaian Businesses">
+    <meta property="og:description" content="Beautiful, affordable websites for Ghanaian businesses. GH₵ 200-1,200. DM @bugjnr on Telegram.">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #0a0a0f; color: #fff; overflow-x: hidden; }
+        
+        .bg-gradient { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(ellipse at 20% 50%, rgba(120, 50, 255, 0.15) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(255, 50, 120, 0.12) 0%, transparent 50%), radial-gradient(ellipse at 50% 80%, rgba(50, 200, 255, 0.1) 0%, transparent 50%); z-index: 0; animation: bgShift 15s ease-in-out infinite alternate; }
+        @keyframes bgShift { 0% { transform: scale(1); } 100% { transform: scale(1.15); } }
+        
+        .particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+        .particle { position: absolute; border-radius: 50%; background: #fff; animation: floatUp linear infinite; opacity: 0; }
+        @keyframes floatUp { 0% { transform: translateY(100vh) scale(0); opacity: 0; } 10% { opacity: 0.8; } 90% { opacity: 0.2; } 100% { transform: translateY(-10vh) scale(1.5); opacity: 0; } }
+        
+        .content { position: relative; z-index: 1; }
+        
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 25px 8%; position: fixed; top: 0; width: 100%; z-index: 100; backdrop-filter: blur(20px); background: rgba(10, 10, 15, 0.7); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .logo { font-size: 1.8rem; font-weight: 800; letter-spacing: 3px; background: linear-gradient(135deg, #a855f7, #ec4899, #6366f1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .nav-links { display: flex; gap: 35px; list-style: none; }
+        .nav-links a { color: #999; text-decoration: none; font-size: 0.9rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: all 0.3s ease; position: relative; }
+        .nav-links a::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: linear-gradient(135deg, #a855f7, #ec4899); transition: width 0.3s ease; }
+        .nav-links a:hover { color: #fff; } .nav-links a:hover::after { width: 100%; }
+        .nav-cta { background: linear-gradient(135deg, #a855f7, #6366f1); color: #fff; padding: 12px 28px; border-radius: 50px; text-decoration: none; font-size: 0.85rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; transition: all 0.3s ease; box-shadow: 0 0 30px rgba(168, 85, 247, 0.3); }
+        .nav-cta:hover { transform: translateY(-3px); box-shadow: 0 0 50px rgba(168, 85, 247, 0.5); }
+        
+        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 10%; }
+        .hero-badge { display: inline-block; padding: 8px 20px; border: 1px solid rgba(168, 85, 247, 0.4); border-radius: 50px; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; color: #a855f7; margin-bottom: 30px; animation: fadeInUp 0.8s ease; }
+        .hero h1 { font-size: 5rem; font-weight: 800; line-height: 1.1; margin-bottom: 20px; animation: fadeInUp 0.8s ease 0.2s both; }
+        .hero h1 .gradient-text { background: linear-gradient(135deg, #a855f7, #ec4899, #6366f1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero .typing-text { font-size: 1.3rem; color: #888; margin-bottom: 35px; animation: fadeInUp 0.8s ease 0.4s both; }
+        .hero .typing-text .cursor { display: inline-block; width: 3px; height: 22px; background: #a855f7; animation: blink 0.7s infinite; vertical-align: middle; margin-left: 4px; }
+        @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+        .hero-buttons { display: flex; gap: 20px; animation: fadeInUp 0.8s ease 0.6s both; }
+        .btn-primary { background: linear-gradient(135deg, #a855f7, #6366f1); color: #fff; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 0 30px rgba(168, 85, 247, 0.3); }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 0 60px rgba(168, 85, 247, 0.5); }
+        .btn-secondary { background: transparent; color: #fff; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; font-size: 0.9rem; border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease; }
+        .btn-secondary:hover { border-color: #a855f7; background: rgba(168, 85, 247, 0.1); box-shadow: 0 0 30px rgba(168, 85, 247, 0.2); }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .section { padding: 100px 8%; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-size: 3rem; font-weight: 800; margin-bottom: 15px; }
+        .section-header p { color: #666; font-size: 1.1rem; max-width: 500px; margin: 0 auto; }
+        
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .service-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 20px; padding: 40px 30px; transition: all 0.4s ease; position: relative; overflow: hidden; }
+        .service-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(236, 72, 153, 0.05)); opacity: 0; transition: opacity 0.4s ease; }
+        .service-card:hover { transform: translateY(-10px); border-color: rgba(168, 85, 247, 0.3); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5); }
+        .service-card:hover::before { opacity: 1; }
+        .service-icon { font-size: 3rem; margin-bottom: 20px; position: relative; }
+        .service-card h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; position: relative; }
+        .service-card p { color: #888; line-height: 1.7; position: relative; }
+        
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .portfolio-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 20px; overflow: hidden; transition: all 0.4s ease; }
+        .portfolio-card:hover { transform: translateY(-10px); border-color: rgba(168, 85, 247, 0.3); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5); }
+        .portfolio-image { height: 200px; background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.1)); display: flex; align-items: center; justify-content: center; font-size: 4rem; }
+        .portfolio-info { padding: 25px; }
+        .portfolio-info h3 { font-size: 1.2rem; margin-bottom: 5px; }
+        .portfolio-info p { color: #888; font-size: 0.9rem; }
+        .portfolio-tag { display: inline-block; padding: 4px 12px; background: rgba(168, 85, 247, 0.2); border-radius: 50px; font-size: 0.75rem; color: #a855f7; margin-top: 10px; }
+        
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+        .pricing-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 20px; padding: 40px 30px; text-align: center; transition: all 0.4s ease; position: relative; }
+        .pricing-card:hover { transform: translateY(-10px); border-color: rgba(168, 85, 247, 0.3); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5); }
+        .pricing-card.popular { border-color: rgba(168, 85, 247, 0.3); }
+        .popular-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #a855f7, #6366f1); color: #fff; padding: 5px 20px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; }
+        .pricing-price { font-size: 3rem; font-weight: 800; color: #a855f7; margin: 15px 0; }
+        .pricing-price span { font-size: 1rem; color: #888; }
+        .pricing-features { list-style: none; text-align: left; margin: 20px 0; }
+        .pricing-features li { padding: 6px 0; color: #999; font-size: 0.9rem; }
+        .pricing-features li::before { content: '✅ '; color: #a855f7; }
+        .pricing-btn { display: inline-block; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; margin-top: 15px; transition: all 0.3s; }
+        .pricing-btn.primary { background: linear-gradient(135deg, #a855f7, #6366f1); color: #fff; }
+        .pricing-btn.primary:hover { box-shadow: 0 0 30px rgba(168, 85, 247, 0.5); }
+        .pricing-btn.outline { border: 2px solid rgba(168, 85, 247, 0.3); color: #a855f7; }
+        .pricing-btn.outline:hover { border-color: #a855f7; background: rgba(168, 85, 247, 0.1); }
+        
+        .contact-section { background: rgba(168, 85, 247, 0.03); }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center; }
+        .contact-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 20px; padding: 40px 20px; transition: all 0.3s; }
+        .contact-card:hover { transform: translateY(-8px); border-color: rgba(168, 85, 247, 0.3); }
+        .contact-icon { font-size: 2.5rem; margin-bottom: 15px; }
+        .contact-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+        .contact-card p, .contact-card a { color: #888; text-decoration: none; font-size: 0.9rem; }
+        .contact-card a:hover { color: #a855f7; }
+        
+        footer { padding: 40px 8%; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.05); color: #555; }
+        footer span { background: linear-gradient(135deg, #a855f7, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } .hero-buttons { flex-direction: column; align-items: center; } nav { flex-direction: column; gap: 15px; } .nav-links { gap: 20px; } }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    <div class="particles" id="particles"></div>
+    <div class="content">
+        <nav>
+            <div class="logo">BUG WEB DESIGN</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <a href="https://t.me/bugjnr" class="nav-cta">DM on Telegram</a>
+        </nav>
+
+        <section class="hero">
+            <div class="hero-badge">🐛 Premium Web Development</div>
+            <h1>We Build<br><span class="gradient-text">Digital Experiences</span></h1>
+            <p class="typing-text" id="typing"></p>
+            <div class="hero-buttons">
+                <a href="https://t.me/bugjnr" class="btn-primary">Start a Project</a>
+                <a href="#" class="btn-secondary">View Portfolio</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header"><h2>What We Do</h2><p>Beautiful, affordable websites for Ghanaian businesses. Fashion, food, salons, gyms & more.</p></div>
+            <div class="services-grid">
+                <div class="service-card"><div class="service-icon">👗</div><h3>Fashion & E-commerce</h3><p>Stunning online stores with product catalogs and WhatsApp order buttons.</p></div>
+                <div class="service-card"><div class="service-icon">🔥</div><h3>Restaurant & Food</h3><p>Mouth-watering menus, reservation forms, and online ordering.</p></div>
+                <div class="service-card"><div class="service-icon">💈</div><h3>Salon & Barber</h3><p>Service menus, booking forms, gallery, and team profiles.</p></div>
+                <div class="service-card"><div class="service-icon">💪</div><h3>Fitness & Gym</h3><p>Membership plans, trainer profiles, class schedules, BMI calculators.</p></div>
+                <div class="service-card"><div class="service-icon">💧</div><h3>Product Brands</h3><p>Premium brand pages that showcase your products beautifully.</p></div>
+                <div class="service-card"><div class="service-icon">🚀</div><h3>Tech & Agency</h3><p>Modern, animated websites for digital agencies and tech brands.</p></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header"><h2>Our Portfolio</h2><p>Real projects. Real results.</p></div>
+            <div class="portfolio-grid">
+                <div class="portfolio-card"><div class="portfolio-image">👗</div><div class="portfolio-info"><h3>BLUSH — Fashion Store</h3><p>Elegant women's fashion & jewelry store</p><span class="portfolio-tag">E-commerce</span></div></div>
+                <div class="portfolio-card"><div class="portfolio-image">🔥</div><div class="portfolio-info"><h3>EMBER — Restaurant</h3><p>Fine dining with menu & reservations</p><span class="portfolio-tag">Restaurant</span></div></div>
+                <div class="portfolio-card"><div class="portfolio-image">💈</div><div class="portfolio-info"><h3>BLADE — Barber & Salon</h3><p>Premium grooming with booking system</p><span class="portfolio-tag">Salon</span></div></div>
+                <div class="portfolio-card"><div class="portfolio-image">💪</div><div class="portfolio-info"><h3>PULSE — Fitness Gym</h3><p>Membership plans & class schedules</p><span class="portfolio-tag">Fitness</span></div></div>
+                <div class="portfolio-card"><div class="portfolio-image">💧</div><div class="portfolio-info"><h3>AQUA — Beverage Brand</h3><p>Premium water brand product page</p><span class="portfolio-tag">Brand</span></div></div>
+                <div class="portfolio-card"><div class="portfolio-image">🚀</div><div class="portfolio-info"><h3>NEBULA — Digital Agency</h3><p>Animated premium agency website</p><span class="portfolio-tag">Agency</span></div></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header"><h2>Pricing</h2><p>Affordable. Transparent. No hidden fees.</p></div>
+            <div class="pricing-grid">
+                <div class="pricing-card"><h3>BASIC</h3><div class="pricing-price">GH₵ 200</div><ul class="pricing-features"><li>1-page website</li><li>WhatsApp button</li><li>Mobile-friendly</li><li>2 days delivery</li></ul><a href="https://t.me/bugjnr" class="pricing-btn outline">Get Started</a></div>
+                <div class="pricing-card popular"><div class="popular-badge">MOST POPULAR</div><h3>STANDARD</h3><div class="pricing-price">GH₵ 500</div><ul class="pricing-features"><li>3-5 page website</li><li>Gallery & contact form</li><li>Custom design</li><li>3-5 days delivery</li></ul><a href="https://t.me/bugjnr" class="pricing-btn primary">Get Started</a></div>
+                <div class="pricing-card"><h3>PREMIUM</h3><div class="pricing-price">GH₵ 1,200</div><ul class="pricing-features"><li>Full website</li><li>Social media setup</li><li>5 graphics included</li><li>30-day support</li></ul><a href="https://t.me/bugjnr" class="pricing-btn outline">Get Started</a></div>
+            </div>
+        </section>
+
+        <section class="section contact-section">
+            <div class="section-header"><h2>Get In Touch</h2><p>Ready to build your website? Let's talk.</p></div>
+            <div class="contact-grid">
+                <div class="contact-card"><div class="contact-icon">📩</div><h3>Telegram</h3><a href="https://t.me/bugjnr">@bugjnr</a></div>
+                <div class="contact-card"><div class="contact-icon">📺</div><h3>Channel</h3><a href="https://t.me/bugwebdesign">@bugwebdesign</a></div>
+                <div class="contact-card"><div class="contact-icon">📧</div><h3>Email</h3><a href="mailto:r31549654@gmail.com">bugwebdesign@gmail.com</a></div>
+            </div>
+        </section>
+
+        <footer><p>© 2026 <span>Bug Web Design</span>. All rights reserved. | Built with ❤️ in Ghana 🇬🇭</p></footer>
+    </div>
+    <script>
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 50; i++) { const p = document.createElement('div'); p.className = 'particle'; p.style.left = Math.random() * 100 + '%'; p.style.width = (Math.random() * 4 + 1) + 'px'; p.style.height = p.style.width; p.style.animationDuration = (Math.random() * 10 + 10) + 's'; p.style.animationDelay = Math.random() * 10 + 's'; particlesContainer.appendChild(p); }
+        const phrases = ['Fashion. Restaurants. Salons. Gyms.', 'Beautiful design. Affordable prices.', 'Your business deserves to be online.', 'GH₵ 200-1,200. Fast delivery.', 'DM @bugjnr to get started!'];
+        let phraseIndex = 0, charIndex = 0, isDeleting = false;
+        const typingEl = document.getElementById('typing');
+        function type() { const current = phrases[phraseIndex]; if (isDeleting) { typingEl.innerHTML = current.substring(0, charIndex - 1) + '<span class="cursor"></span>'; charIndex--; } else { typingEl.innerHTML = current.substring(0, charIndex + 1) + '<span class="cursor"></span>'; charIndex++; } if (!isDeleting && charIndex === current.length) { isDeleting = true; setTimeout(type, 2000); return; } if (isDeleting && charIndex === 0) { isDeleting = false; phraseIndex = (phraseIndex + 1) % phrases.length; setTimeout(type, 500); return; } setTimeout(type, isDeleting ? 30 : 60); }
+        type();
+    </script>
+</body>
+</html>
